@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+	font-family: 'Lato';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+	color: #000;
+
+	+ h1,
+	+ h2,
+	+ h3,
+	+ h4,
+	+ h5,
+	+ h6 {
+		margin-top: -1rem;
+	}
+}
+
+p {
+	font-size: 19px;
+	font-weight: 300;
+	color: #000;
+}
+
+.q-page {
+	max-width: 1080px;
+	margin: 2rem auto;
+}
