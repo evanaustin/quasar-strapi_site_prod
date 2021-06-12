@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_columns",
+  "info": {
+    "name": "Columns",
+    "icon": "columns",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Column": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.column"
+    }
+  }
+}

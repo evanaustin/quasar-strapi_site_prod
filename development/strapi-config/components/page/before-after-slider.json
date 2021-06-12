@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_page_before_after_sliders",
+  "info": {
+    "name": "Before/After Slider",
+    "icon": "exchange-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "before_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "after_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "aligned_content": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.aligned-content"
+    }
+  }
+}

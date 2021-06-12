@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_copies",
+  "info": {
+    "name": "Copy",
+    "icon": "text-height",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "copy": {
+      "type": "richtext"
+    }
+  }
+}
