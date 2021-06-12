@@ -1,0 +1,64 @@
+version: "3"
+
+services:
+  reverse-proxy:
+    image: nginx:1.17.10
+    container_name: reverse_proxy
+    volumes:
+      - ./reverse_proxy/nginx.conf:/etc/nginx/nginx.conf
+      - ./reverse_proxy/certbot/conf:/etc/letsencrypt
+      - ./reverse_proxy/certbot/www:/var/www/certbot
+    ports:
+      - 80:80
+      - 443:443
+    command: '/bin/sh -c ''while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g "daemon off;"'''
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./reverse_proxy/certbot/conf:/etc/letsencrypt
+      - ./reverse_proxy/certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+
+  quasar:
+    image: quasar
+    container_name: quasar
+    build:
+      context: ./quasar
+    ports:
+      - 8080:80
+    restart: on-failure
+
+  strapi:
+    image: strapi/strapi
+    container_name: strapi
+    restart: on-failure
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+    volumes:
+      - ./strapi:/srv/app
+    ports:
+      - 1337:1337
+
+  mongo:
+    image: mongo
+    container_name: strapi_mongo
+    restart: on-failure
+    env_file: .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - strapidata:/data/db
+    ports:
+      - 27017:27017
+
+volumes:
+  strapidata:
