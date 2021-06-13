@@ -5,6 +5,7 @@ This is a tabula rasa scaffold for a new Quasar (Vue) + Strapi (Node + MongoDB) 
 This a production configuration. For the development configuration, check the `../development` directory.
 
 ## Most recent successful build:
+- T.B.D.
 <!-- - 10:12PM EST 6/11/2021 -->
 <!-- - macOS 11.3.1 on Apple M1 -->
 <!-- - Docker Desktop 3.3.3 (Engine v20.10.6 on darwin/arm64) -->
