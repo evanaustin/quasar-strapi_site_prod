@@ -30,11 +30,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "aligned_content": {
-      "type": "component",
-      "repeatable": false,
-      "component": "page.aligned-content"
     }
   }
 }
