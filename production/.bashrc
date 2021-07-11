@@ -6,6 +6,8 @@ alias dps='docker ps'
 alias logall='dc logs --tail=all -f'
 
 alias qdown='docker stop quasar && docker rm quasar'
+alias qdeploy='dc build quasar && qdown && dc up -d'
+alias strapilog='dc logs --tail=all -f | grep strapi_'
 alias buildup='dc build && qdown && dc up -d'
 
 dx() {
