@@ -28,7 +28,7 @@ This a production configuration. For the development configuration, check the `.
 6. Git
 
 ## Recommendations
-- [Yarn](https://classic.yarnpkg.com/en/docs/cli/global/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install)
 - [NVM](https://github.com/nvm-sh/nvm)
 - [Vue Devtools](https://github.com/vuejs/vue-devtools)
 - [Apollo Client Devtools](https://www.apollographql.com/docs/react/development-testing/developer-tooling/)
