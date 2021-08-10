@@ -38,7 +38,7 @@ This a production configuration. For the development configuration, check the [t
 
 
 ## Initiate quasar
-- `$ pwd` : `../tabularasa_quasar-strapi_website/production`
+- `$ pwd` : `../template_quasar-strapi_site_prod`
 - `$ cd quasar`
 - `$ nvm use 13`
 - `$ yarn`
@@ -46,7 +46,7 @@ This a production configuration. For the development configuration, check the [t
 - `$ qdeploy`
 
 ## Initiate strapi
-- `$ pwd` : `../tabularasa_quasar-strapi_website/production`
+- `$ pwd` : `../template_quasar-strapi_site_prod`
 - `$ docker-compose up -d` (or `dc up -d` with the provided alias)
 - `$ docker-compose logs --tail=all -f | grep strapi` (or `log -s` with the provided alias)
 - `$ docker-compose down` (or `dc down` with provided alias)
@@ -58,7 +58,7 @@ This a production configuration. For the development configuration, check the [t
 
 ## Pull live strapi
 **⛔️ Important** : *This may not be necessary anymore...*
-- `$ pwd` : `../tabularasa_quasar-strapi_website/production`
+- `$ pwd` : `../template_quasar-strapi_site_prod`
 - `$ mkdir safe`
 - `$ mv jwt.js ./safe`
 - `$ mv package.json ./safe`
@@ -67,7 +67,7 @@ This a production configuration. For the development configuration, check the [t
 - `$ git reset --hard origin/main`
 - `$ cd strapi`
 - `$ rm -R .build .cache node_modules package-lock.json yarn.lock`
-- `$ pwd` : `../tabularasa_quasar-strapi_website/production`
+- `$ pwd` : `../template_quasar-strapi_site_prod`
 - `$ dc up -d`
 - `$ log -s`
 - `$ sudo yarn build --clean`
