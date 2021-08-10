@@ -67,8 +67,8 @@ module.exports = function(ctx) {
 		build: {
 			vueRouterMode: 'history', // available values: 'hash', 'history'
 			env: {
-				// STRAPI_URL: ctx.dev ? process.env.STRAPI_URL : 'https://prod.api.com'
-				STRAPI_URL: process.env.STRAPI_URL
+				STRAPI_URL: ctx.dev ? '"http://localhost:3000"' : '"https://cms.yourwebsite.com"'
+				// STRAPI_URL: process.env.STRAPI_URL
 			},
 
 			// rtl: false, // https://quasar.dev/options/rtl-support
