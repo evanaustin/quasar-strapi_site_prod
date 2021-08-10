@@ -45,7 +45,7 @@ This a development configuration. For the production configuration, check the `.
 8. Check out the **Strapi** dashboard and create the first admin user:
     - http://localhost:3000/admin
 9. From the dashboard, create an initial dataset for our Quasar app:
-    - at least one `page` (in Collection Types > Accounts)
+    - at least one `page` (in Collection Types > Pages)
     - at least one `post` (in Collection Types > Modules)
 10. Install the Documentation plugin (in General > Marketplace)
 
