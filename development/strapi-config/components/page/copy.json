@@ -9,6 +9,11 @@
   "attributes": {
     "copy": {
       "type": "richtext"
+    },
+    "Styles": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.styles"
     }
   }
 }
