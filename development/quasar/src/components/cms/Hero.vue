@@ -1,7 +1,7 @@
 <template>
   <div
     class="hero"
-    :style="`background-image: url(${strapiURL}/uploads/${backgroundImage.formats.large.hash}${backgroundImage.formats.large.ext})`"
+    :style="`background-image: url(${strapiURL}/${backgroundImage.formats.large.url})`"
   >
     <h4 v-if="title">{{ title }}</h4>
   </div>
