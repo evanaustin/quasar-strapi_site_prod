@@ -34,7 +34,9 @@ This a production configuration. For the development configuration, check the [t
 - [Apollo Client Devtools](https://www.apollographql.com/docs/react/development-testing/developer-tooling/)
 
 ## Get Started
-
+- `$ pwd` : `../template_quasar-strapi_site_prod`
+- `mv .env.example .env`
+- `mv strapi-config/.env.example strapi-config/.env`
 
 
 ## Initiate quasar
