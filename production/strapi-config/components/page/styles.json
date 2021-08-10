@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_page_styles",
+  "info": {
+    "name": "Styles",
+    "icon": "border-style"
+  },
+  "options": {},
+  "attributes": {
+    "padding_top_bottom": {
+      "type": "enumeration",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    },
+    "padding_left_right": {
+      "type": "enumeration",
+      "enum": [
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ]
+    },
+    "alignment": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "center",
+        "right",
+        "justified"
+      ]
+    }
+  }
+}
