@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "header_menus",
+  "info": {
+    "name": "Header Menu"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Links": {
+      "type": "dynamiczone",
+      "components": [
+        "page.link"
+      ]
+    }
+  }
+}
