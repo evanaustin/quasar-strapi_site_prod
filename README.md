@@ -45,7 +45,7 @@ This a production configuration. For the development configuration, check the [t
 - `$ nvm use 13`
 - `$ yarn`
 - `$ yarn build`
-- `$ qdeploy`
+- `$ cd .. && qdeploy`
 
 ## Initiate strapi
 - `$ pwd` : `../template_quasar-strapi_site_prod`
